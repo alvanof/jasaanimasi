@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add-on checkboxes and custom char qty
     const addons = [
+        document.getElementById('ao-audio-customer'),
         document.getElementById('ao-vo-ai'),
         document.getElementById('ao-vo-manual'),
         document.getElementById('ao-sub'),
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let aoCost = 0;
 
                 if (type === 'flat') {
-                    aoCost = price;
+                    aoCost = price; // could be 0 for free items
                 } else if (type === 'per-minute') {
                     aoCost = price * durasi;
                     aoName += ` (${durasi} mnt x Rp ${formatRp(price)})`;
@@ -171,7 +172,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 let aoName = ao.getAttribute('data-name');
                 if (ao.id === 'ao-custom-char') {
                     const qty = parseInt(customCharQty.value) || 1;
-                    aoName += ` (${qty} karkater)`;
+                    aoName += ` (${qty} karakter)`;
+                } else if (ao.getAttribute('data-type') === 'per-minute') {
+                    const durasi = parseInt(durasiInput.value) || 1;
+                    aoName += ` (${durasi} mnt)`;
                 }
                 selectedAddons.push(aoName);
             }

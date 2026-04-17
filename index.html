@@ -37,7 +37,7 @@
     </header>
 
     <section class="hero">
-        <h1>Wujudkan Idenmu Menjadi <span>Animasi Menarik!</span></h1>
+        <h1>Ubah Idemu menjadi <span>Animasi</span></h1>
         <p>Jasa pembuatan video animasi profesional untuk berbagai keperluan. Mulai dari tugas sekolah, edukasi,
             hingga promosi & iklan komersial.</p>
         <a href="#packages" class="btn btn-dark"><i class="fas fa-play-circle"></i> Lihat Portofolio</a>
@@ -54,8 +54,8 @@
             <div class="package-block">
                 <div class="package-header">
                     <div class="package-title">
-                        <h3>Paket 1 (Pro / Kompleks)</h3>
-                        <p>Maksimal 3 karakter pembicara (Bisa lebih, didiskusikan)</p>
+                        <h3>Paket 1 (Pro)</h3>
+                        <p>Video animasi profesional, maksimal 3 karakter pembicara (Bisa lebih, didiskusikan)</p>
                     </div>
                     <div class="package-price">Rp 100.000<span>/menit</span></div>
                 </div>
@@ -69,7 +69,7 @@
                         <li>Tutorial</li>
                         <li>Perusahaan</li>
                         <li>Bisnis</li>
-                        <li>dll...</li>
+                        <li>dll.</li>
                     </ul>
                 </div>
                 <!-- 3x2 Grid for Package 1 -->
@@ -105,7 +105,7 @@
             <div class="package-block">
                 <div class="package-header">
                     <div class="package-title">
-                        <h3>Paket 2 (Sederhana)</h3>
+                        <h3>Paket 2 (Simpel)</h3>
                         <p>Video animasi lebih sederhana, maksimal 1 karakter pembicara</p>
                     </div>
                     <div class="package-price">Rp 50.000<span>/menit</span></div>
@@ -198,7 +198,16 @@
                     <div class="form-group">
                         <label>Pilih Add-ons</label>
                         <div class="addon-list">
-                            <!-- Voice Options (Mutually exclusive logical or radio, but let's use checkbox logic for flexibility. User said "kalo pake audio customer ga usah masukkan opsi ini", so they are optional check/uncheck) -->
+                            <!-- Audio Customer - Free -->
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="ao-audio-customer" value="0" data-name="Audio Customer"
+                                    data-type="flat">
+                                <span class="addon-name">Audio Customer <br><small
+                                        style="color: var(--text-muted);font-size:0.8em">Customer merekam sendiri audio yang akan digunakan pada animasi</small></span>
+                                <span class="addon-price" style="color: var(--dark); font-weight:700;">FREE</span>
+                            </label>
+
+                            <!-- Voice Over AI -->
                             <label class="checkbox-label">
                                 <input type="checkbox" id="ao-vo-ai" value="20000" data-name="Voice Over AI"
                                     data-type="flat">
@@ -208,10 +217,11 @@
 
                             <!-- Voice over manual per menit -->
                             <label class="checkbox-label">
-                                <input type="checkbox" id="ao-vo-manual" value="15000" data-name="Voice Over Manual"
+                                <input type="checkbox" id="ao-vo-manual" value="30000" data-name="Voice Over Manual"
                                     data-type="per-minute">
-                                <span class="addon-name">Voice Over Manual (/menit)</span>
-                                <span class="addon-price">+Rp 15.000/mnt</span>
+                                <span class="addon-name">Voice Over Manual (/menit) <br><small
+                                        style="color: var(--text-muted);font-size:0.8em">Suara asli kami rekam manual, disesuaikan dengan karakter — lebih natural dan lebih baik intonasi &amp; emosinya dibanding Voice Over AI</small></span>
+                                <span class="addon-price">+Rp 30.000/mnt</span>
                             </label>
 
                             <label class="checkbox-label">
@@ -220,11 +230,12 @@
                                 <span class="addon-price">+Rp 10.000</span>
                             </label>
 
+                            <!-- Sound Effect - per menit -->
                             <label class="checkbox-label">
                                 <input type="checkbox" id="ao-sfx" value="20000" data-name="Sound Effect"
-                                    data-type="flat">
-                                <span class="addon-name">Sound Effect</span>
-                                <span class="addon-price">+Rp 20.000</span>
+                                    data-type="per-minute">
+                                <span class="addon-name">Sound Effect (/menit)</span>
+                                <span class="addon-price">+Rp 20.000/mnt</span>
                             </label>
 
                             <label class="checkbox-label"
@@ -237,12 +248,11 @@
                             </label>
 
                             <label class="checkbox-label has-input">
-                                <input type="checkbox" id="ao-custom-char" value="20000" data-name="Custom Character"
+                                <input type="checkbox" id="ao-custom-char" value="50000" data-name="Custom Character"
                                     data-type="qty">
                                 <span class="addon-name">Custom Character <br><small
-                                        style="color: var(--text-muted);font-size:0.8em">Termasuk pose, pakaian,
-                                        wajah</small></span>
-                                <span class="addon-price">+Rp 20.000/karakter</span>
+                                        style="color: var(--text-muted);font-size:0.8em">Termasuk pose, pakaian, wajah</small></span>
+                                <span class="addon-price">+Rp 50.000/karakter</span>
                                 <input type="number" id="ao-char-qty" class="addon-qty" min="1" value="1">
                             </label>
                         </div>

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const paketSelect = document.getElementById('paket');
     const durasiInput = document.getElementById('durasi');
     const deadlineRadios = document.querySelectorAll('input[name="deadline"]');
-    
+
     // Receipt Elements
     const rDate = document.getElementById('r-date');
     const rPaketName = document.getElementById('r-paket-name');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const durasi = parseInt(durasiInput.value) || 1;
         const paketPrice = parseInt(paketSelect.value);
         const paketName = paketSelect.options[paketSelect.selectedIndex].getAttribute('data-name');
-        
+
         let deadlinePricePerMin = 0;
         let deadlineName = "";
         deadlineRadios.forEach(r => {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         addons.forEach(ao => {
             if (ao && ao.checked) {
-                if(!hasActiveAddons) {
+                if (!hasActiveAddons) {
                     rAddonsContainer.innerHTML = `<div class="item-row main" style="margin-top:10px;"><span>Add-ons:</span></div>`;
                     hasActiveAddons = true;
                 }
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Totals
         rGrandTotal.textContent = "Rp " + formatRp(totalHarga);
-        
+
         // DP 50%
         const dpVal = totalHarga * 0.5;
         rDpTotal.textContent = "Rp " + formatRp(dpVal);
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event Listeners for Live Update
     form.addEventListener('input', calculate);
-    
+
     // Initial Calc
     let currentCalc = calculate();
 
@@ -144,12 +144,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btnDownload.addEventListener('click', () => {
         const target = document.getElementById('receipt-capture');
         // Ensure capture area background is solid white just in case
-        target.style.background = "#fff"; 
-        
+        target.style.background = "#fff";
+
         // Change button text temporarily
         btnDownload.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
-        
-        html2canvas(target, {scale: 2}).then(canvas => {
+
+        html2canvas(target, { scale: 2 }).then(canvas => {
             const link = document.createElement('a');
             link.download = `Struk_Animasi_Mulmul_${Date.now()}.png`;
             link.href = canvas.toDataURL('image/png');
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnWa.addEventListener('click', () => {
         currentCalc = calculate(); // get fresh calc
-        
+
         // Gather selected addons
         let selectedAddons = [];
         addons.forEach(ao => {
@@ -180,23 +180,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 selectedAddons.push(aoName);
             }
         });
-        
+
         let addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Tidak ada';
 
         // Prepare Wa text
         const waText = `Halo Jasa Animasi by Mulmul,%0A%0A` +
-        `Saya ingin order dengan rincian berikut:%0A` +
-        `📦 *Paket:* ${currentCalc.paketName}%0A` +
-        `⏱️ *Durasi:* ${currentCalc.durasi} Menit%0A` +
-        `⏳ *Deadline:* ${currentCalc.deadlineName}%0A` +
-        `➕ *Add-ons:* ${addonsText}%0A` +
-        `---------------------------%0A` +
-        `💰 *Total Harga:* Rp ${formatRp(currentCalc.totalHarga)}%0A` +
-        `💵 *Total DP (50%):* Rp ${formatRp(currentCalc.dpVal)}%0A%0A` +
-        `Berikut saya lampirkan foto/file bukti transfer DP nya. Mohon diproses ya. Terima kasih!`;
+            `Saya ingin order dengan rincian berikut:%0A` +
+            `📦 *Paket:* ${currentCalc.paketName}%0A` +
+            `⏱️ *Durasi:* ${currentCalc.durasi} Menit%0A` +
+            `⏳ *Deadline:* ${currentCalc.deadlineName}%0A` +
+            `➕ *Add-ons:* ${addonsText}%0A` +
+            `---------------------------%0A` +
+            `💰 *Total Harga:* Rp ${formatRp(currentCalc.totalHarga)}%0A` +
+            `💵 *Total DP (50%):* Rp ${formatRp(currentCalc.dpVal)}%0A%0A` +
+            `Berikut saya lampirkan foto/file bukti transfer DP nya. Mohon diproses ya. Terima kasih!`;
 
         // Redirect to wa (Replace 628123456789 with actual user's number)
-        const waNumber = "628123456789"; 
+        const waNumber = "6282214816134";
         window.open(`https://wa.me/${waNumber}?text=${waText}`, '_blank');
     });
 

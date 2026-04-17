@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Tidak ada';
 
         // Prepare Wa text
-        const waText = `Halo Jasa Animasi by Mulmul,%0A%0A` +
+        const waText = `Halo Jasa Animasi by Mulmul 👋,%0A%0A` +
             `Saya ingin order dengan rincian berikut:%0A` +
             `📦 *Paket:* ${currentCalc.paketName}%0A` +
             `⏱️ *Durasi:* ${currentCalc.durasi} Menit%0A` +

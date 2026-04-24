@@ -245,7 +245,7 @@
                                 <label class="radio-label">
                                     <input type="radio" name="deadline" value="30000" data-name="Super Express (2 Hari)"
                                         data-days="2">
-                                    <span>Super Express<br><small>(2 Hari) +30k/menit</small></span>
+                                    <span>Priority<br><small>(2 Hari) +30k/menit</small></span>
                                 </label>
                                 <label class="radio-label">
                                     <input type="radio" name="deadline" value="50000" data-name="Urgent (1 Hari)"
@@ -262,65 +262,76 @@
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="ao-audio-customer" value="0" data-name="Audio Customer"
                                         data-type="flat">
-                                    <span class="addon-name">Audio Customer <br><small
+                                    <span class="addon-name">Audio Customer <span class="addon-price"
+                                            style="color: var(--dark); font-weight:700;">[FREE]</span><br><small
                                             style="color: var(--text-muted);font-size:0.8em">Customer merekam sendiri
                                             audio
                                             yang akan digunakan pada animasi </small></span>
-                                    <span class="addon-price" style="color: var(--dark); font-weight:700;">[FREE]</span>
                                 </label>
 
                                 <!-- Voice Over AI -->
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="ao-vo-ai" value="20000" data-name="Voice Over AI"
                                         data-type="flat">
-                                    <span class="addon-name">Voice Over AI</span>
-                                    <span class="addon-price">+Rp 20.000</span>
+                                    <span class="addon-name">Voice Over AI <span class="addon-price">+Rp
+                                            20.000</span><br><small
+                                            style="color: var(--text-muted);font-size:0.8em">Suara
+                                            dihasilkan oleh AI
+                                            (Robot). (Bisa custom suara Pria/Wanita)</small></span>
                                 </label>
 
                                 <!-- Voice over manual per menit -->
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="ao-vo-manual" value="30000" data-name="Voice Over Manual"
                                         data-type="per-minute">
-                                    <span class="addon-name">Voice Over Manual (/menit) <br><small
+                                    <span class="addon-name">Voice Over Manual <span class="addon-price">+Rp
+                                            30.000/menit</span><br><small
                                             style="color: var(--text-muted);font-size:0.8em">Suara asli kami rekam
                                             manual,
-                                            disesuaikan dengan karakter — lebih natural dan lebih baik intonasi &amp;
+                                            disesuaikan dengan karakter, lebih natural dan lebih baik intonasi &amp;
                                             emosinya dibanding Voice Over AI</small></span>
-                                    <span class="addon-price">+Rp 30.000/menit</span>
                                 </label>
 
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="ao-sub" value="10000" data-name="Subtitle"
                                         data-type="flat">
-                                    <span class="addon-name">Subtitle</span>
-                                    <span class="addon-price">+Rp 10.000</span>
+                                    <span class="addon-name">Subtitle <span class="addon-price">+Rp
+                                            10.000</span><br><small
+                                            style="color: var(--text-muted);font-size:0.8em">Menambahkan teks narasi di
+                                            bagian bawah video animasi.</small></span>
                                 </label>
 
                                 <!-- Sound Effect - per menit -->
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="ao-sfx" value="20000" data-name="Sound Effect"
                                         data-type="per-minute">
-                                    <span class="addon-name">Sound Effect (/menit)</span>
-                                    <span class="addon-price">+Rp 20.000/menit</span>
+                                    <span class="addon-name">Sound Effect <span class="addon-price">+Rp
+                                            20.000/menit</span><br><small
+                                            style="color: var(--text-muted);font-size:0.8em">Penambahan efek suara
+                                            (langkah
+                                            kaki, dsb) agar video lebih hidup.</small></span>
                                 </label>
 
                                 <label class="checkbox-label"
                                     title="Semua file project tidak akan dipublikasikan ke sosmed kami">
                                     <input type="checkbox" id="ao-private" value="30000" data-name="Private Project"
                                         data-type="flat">
-                                    <span class="addon-name">Private Project (Hak Milik Penuh) <i
-                                            class="fas fa-info-circle" style="color:var(--text-muted)"></i></span>
-                                    <span class="addon-price">+Rp 30.000</span>
+                                    <span class="addon-name">Private Project <span class="addon-price">+Rp
+                                            30.000</span><br><small
+                                            style="color: var(--text-muted);font-size:0.8em">Proyek
+                                            tidak akan
+                                            dipublikasikan ke sosmed/portofolio kami dan menjadi hak milik penuh
+                                            customer.</small></span>
                                 </label>
 
                                 <label class="checkbox-label has-input">
                                     <input type="checkbox" id="ao-custom-char" value="50000"
                                         data-name="Custom Character" data-type="qty">
-                                    <span class="addon-name">Custom Character <br><small
+                                    <span class="addon-name">Custom Character <span class="addon-price">+Rp
+                                            50.000/karakter</span><br><small
                                             style="color: var(--text-muted);font-size:0.8em">Buat karakter versimu
                                             sendiri,
                                             termasuk pose, pakaian & wajah</small></span>
-                                    <span class="addon-price">+Rp 50.000/karakter</span>
                                     <input type="number" id="ao-char-qty" class="addon-qty" min="1" value="1">
                                 </label>
 
@@ -341,6 +352,11 @@
                                 </label>
 
                             </div>
+                            <small style="color: var(--text-muted); margin-top: 10px; display: block;"><i
+                                    class="fas fa-gift"></i> Gratis 2x revisi.<br>Waktu pengerjaan revisi 2-3 hari.<br>
+                                Biaya
+                                tambahan berlaku jika melebihi
+                                batas jumlah revisi.</small>
                         </div>
 
                     </form>
@@ -389,15 +405,56 @@
                             </div>
                         </div>
 
-                        <div class="bank-info">
-                            <p>Pembayaran Transfer ke:</p>
-                            <strong>BRI</strong>
-                            <strong>337701030225531</strong>
-                            <strong>Dana/ShopePay/Gopay:</strong>
-                            <strong>082214816134</strong>
-                            <strong>(a/n Mulia Mahendra Alvanof)</strong>
-                            <p style="margin-top: 5px; font-size: 0.85rem;"><i class="fas fa-camera"></i> Harap simpan /
-                                foto struk ini saat konfirmasi DP</p>
+                        <div class="bank-info" style="margin-top: 20px; text-align: center;">
+                            <p style="font-weight: 600; margin-bottom: 10px;">Metode Pembayaran:</p>
+
+                            <div
+                                style="background: var(--light); padding: 15px; border-radius: 12px; margin-bottom: 15px; border: 1px solid var(--border);">
+                                <img src="QRIS.png" alt="QRIS Payment"
+                                    style="max-width: 200px; height: auto; border-radius: 8px; margin: 0 auto 10px; display: block;">
+                                <strong style="font-size: 1.05rem; color: var(--dark);">QRIS (Pro Access ID)</strong>
+                            </div>
+
+                            <div style="display: flex; align-items: center; justify-content: center; margin: 15px 0;">
+                                <span style="height: 1px; background: var(--border); flex-grow: 1;"></span>
+                                <span style="padding: 0 10px; color: var(--text-muted); font-size: 0.85rem;">atau
+                                    transfer
+                                    ke</span>
+                                <span style="height: 1px; background: var(--border); flex-grow: 1;"></span>
+                            </div>
+
+                            <div
+                                style="background: var(--light); padding: 15px 20px; border-radius: 12px; text-align: left; display: block; border: 1px solid var(--border);">
+                                <div style="margin-bottom: 12px;">
+                                    <span
+                                        style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 3px;">Bank
+                                        BRI</span>
+                                    <strong
+                                        style="font-size: 1.15rem; color: var(--dark); letter-spacing: 1px; display: block;">3377
+                                        0103 0225 531</strong>
+                                </div>
+
+                                <div style="margin-bottom: 15px;">
+                                    <span
+                                        style="display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 3px;">Dana
+                                        / ShopePay / Gopay</span>
+                                    <strong
+                                        style="font-size: 1.15rem; color: var(--dark); letter-spacing: 1px; display: block;">0822
+                                        1481 6134</strong>
+                                </div>
+
+                                <div style="padding-top: 12px; border-top: 1px dashed #ccc;">
+                                    <span style="font-size: 0.85rem; color: var(--text-muted);">Atas Nama: <strong
+                                            style="color: var(--dark);">Mulia Mahendra Alvanof</strong></span>
+                                </div>
+                            </div>
+
+                            <div
+                                style="margin-top: 15px; background: #eef8f1; padding: 12px; border-radius: 8px; color: var(--dark); font-size: 0.85rem; text-align: left; border-left: 4px solid var(--primary);">
+                                <i class="fas fa-info-circle" style="color: var(--primary); margin-right: 5px;"></i>
+                                Harap
+                                simpan atau foto struk bukti pembayaran uang muka (DP) untuk konfirmasi lebih lanjut.
+                            </div>
                         </div>
                     </div>
 

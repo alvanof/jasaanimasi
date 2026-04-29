@@ -138,66 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCalc = calculate();
 
     // Export Logic
-    const btnDownload = document.getElementById('btn-download');
     const btnWa = document.getElementById('btn-whatsapp');
 
-    btnDownload.addEventListener('click', () => {
-        const target = document.getElementById('receipt-capture');
-        // Ensure capture area background is solid white just in case
-        target.style.background = "#fff";
-
-        // Change button text temporarily
-        btnDownload.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
-
-        html2canvas(target, { scale: 2 }).then(canvas => {
-            const link = document.createElement('a');
-            link.download = `Struk_Animasi_Mulmul_${Date.now()}.png`;
-            link.href = canvas.toDataURL('image/png');
-            link.click();
-            btnDownload.innerHTML = '<i class="fas fa-download"></i> Download Struk';
-        }).catch(err => {
-            console.error(err);
-            alert("Gagal mengunduh struk.");
-            btnDownload.innerHTML = '<i class="fas fa-download"></i> Download Struk';
-        });
-    });
-
     btnWa.addEventListener('click', () => {
-        currentCalc = calculate(); // get fresh calc
-
-        // Gather selected addons
-        let selectedAddons = [];
-        addons.forEach(ao => {
-            if (ao && ao.checked) {
-                let aoName = ao.getAttribute('data-name');
-                if (ao.id === 'ao-custom-char') {
-                    const qty = parseInt(customCharQty.value) || 1;
-                    aoName += ` (${qty} karakter)`;
-                } else if (ao.getAttribute('data-type') === 'per-minute') {
-                    const durasi = parseInt(durasiInput.value) || 1;
-                    aoName += ` (${durasi} mnt)`;
-                }
-                selectedAddons.push(aoName);
-            }
-        });
-
-        let addonsText = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Tidak ada';
-
-        // Prepare Wa text
-        const waText = `Halo Jasa Animasi by Mulmul 👋,%0A%0A` +
-            `Saya ingin order dengan rincian berikut:%0A` +
-            `📦 *Paket:* ${currentCalc.paketName}%0A` +
-            `⏱️ *Durasi:* ${currentCalc.durasi} Menit%0A` +
-            `⏳ *Deadline:* ${currentCalc.deadlineName}%0A` +
-            `➕ *Add-ons:* ${addonsText}%0A` +
-            `---------------------------%0A` +
-            `💰 *Total Harga:* Rp ${formatRp(currentCalc.totalHarga)}%0A` +
-            `💵 *Total DP (50%):* Rp ${formatRp(currentCalc.dpVal)}%0A%0A` +
-            `Berikut saya lampirkan foto/file bukti transfer DP nya. Mohon diproses ya. Terima kasih!`;
-
-        // Redirect to wa (Replace 628123456789 with actual user's number)
         const waNumber = "6282214816134";
-        window.open(`https://wa.me/${waNumber}?text=${waText}`, '_blank');
+        window.open(`https://wa.me/${waNumber}`, '_blank');
     });
 
 });

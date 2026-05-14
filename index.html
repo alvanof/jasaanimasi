@@ -73,70 +73,23 @@
     </section>
 
     <section id="packages" class="section">
-        <h2 class="section-title">Pilihan Paket Animasi</h2>
+        <h2 class="section-title">Portofolio Animasi</h2>
 
         <div class="packages-container">
 
-            <!-- Paket 1 -->
+            <!-- Paket Animasi -->
             <div class="package-block">
                 <div class="package-header">
                     <div class="package-title">
-                        <h3>Paket 1 (Simpel)</h3>
-                        <p>Video animasi 2D sederhana, maksimal 1 karakter pembicara</p>
-                    </div>
-                    <div class="package-price">Rp 50.000<span>/menit</span></div>
-                </div>
-                <div class="package-desc">
-                    <strong>Cocok untuk:</strong>
-                    <ul>
-                        <li>Tugas Sekolah</li>
-                        <li>Pembelajaran</li>
-                        <li>Cerita Pendek</li>
-                    </ul>
-                </div>
-                <!-- 3x2 Grid for Package 1 -->
-                <div class="video-grid">
-                    <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/3cvPWjMmpa8?rel=0" title="Video 1"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/NmILgbxnuXE?rel=0" title="Video 2"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/lv4GHlBlqOg?rel=0" title="Video 3"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="video-card mobile-hide">
-                        <iframe src="https://www.youtube.com/embed/ustTRZfBIJg?rel=0" title="Video 4"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="video-card mobile-hide">
-                        <iframe src="https://www.youtube.com/embed/gomJT-dad10?rel=0" title="Video 5"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="video-card mobile-hide">
-                        <iframe src="https://www.youtube.com/embed/OqQY3r72V0Y?rel=0" title="Video 6"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Paket 2 -->
-            <div class="package-block">
-                <div class="package-header">
-                    <div class="package-title">
-                        <h3>Paket 2 (Pro)</h3>
-                        <p>Video animasi 2D dengan 3 karakter pembicara (dapat didiskusikan jika ingin
-                            lebih)</p>
+                        <h3>Paket Animasi 2D</h3>
+                        <p>Video animasi 2D profesional dengan karakter pembicara (dapat didiskusikan untuk detail
+                            karakter)</p>
                     </div>
                     <div class="package-price">Rp 100.000<span>/menit</span></div>
                 </div>
                 <div class="package-desc">
                     <strong>Cocok untuk:</strong>
                     <ul>
-                        <li>Latsar</li>
                         <li>Edukasi</li>
                         <li>Kesehatan</li>
                         <li>Promosi / Iklan</li>
@@ -185,11 +138,11 @@
             <!-- Left Side: Form -->
             <div class="calc-card">
                 <form id="orderForm">
-                    <div class="form-group">
+                    <div class="form-group" style="display: none;">
                         <label>Pilih Paket</label>
                         <select id="paket" required>
-                            <option value="50000" data-name="Paket 1">Paket 1 - Rp 50k/menit</option>
-                            <option value="100000" data-name="Paket 2">Paket 2 - Rp 100k/menit</option>
+                            <option value="100000" data-name="Paket Animasi 2D" selected>Paket Animasi 2D - Rp
+                                100k/menit</option>
                         </select>
                     </div>
 
@@ -316,12 +269,12 @@
 
                     <div class="receipt-items">
                         <div class="item-row main">
-                            <span id="r-paket-name">Paket 1</span>
+                            <span id="r-paket-name">Paket Animasi 2D</span>
                             <span id="r-paket-total">Rp 0</span>
                         </div>
                         <div class="item-row sub">
                             <span>Durasi: <span id="r-durasi-val">1</span> menit (@Rp <span
-                                    id="r-paket-base">50.000</span>)</span>
+                                    id="r-paket-base">100.000</span>)</span>
                         </div>
                         <div class="item-row sub" id="r-deadline-row" style="display:none;">
                             <span>Deadline Tambahan (<span id="r-deadline-name">Express</span>)</span>

@@ -211,12 +211,10 @@
                                 style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem;">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" style="display: none;">
                             <label>Pilih Paket</label>
                             <select id="paket" required>
-                                <option value="50000" data-name="Paket 1">Paket 1 - Rp 50k/menit
-                                </option>
-                                <option value="100000" data-name="Paket 2">Paket 2 - Rp 100k/menit
+                                <option value="100000" data-name="Paket Animasi 2D" selected>Paket Animasi 2D - Rp 100k/menit
                                 </option>
                             </select>
                         </div>
@@ -376,12 +374,12 @@
 
                         <div class="receipt-items">
                             <div class="item-row main">
-                                <span id="r-paket-name">Paket 1</span>
+                                <span id="r-paket-name">Paket Animasi 2D</span>
                                 <span id="r-paket-total">Rp 0</span>
                             </div>
                             <div class="item-row sub">
                                 <span>Durasi: <span id="r-durasi-val">1</span> menit (@Rp <span
-                                        id="r-paket-base">50.000</span>)</span>
+                                        id="r-paket-base">100.000</span>)</span>
                             </div>
                             <div class="item-row sub" id="r-deadline-row" style="display:none;">
                                 <span>Deadline Tambahan (<span id="r-deadline-name">Express</span>)</span>

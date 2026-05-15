@@ -1017,7 +1017,7 @@
 
                             <div style="background: var(--light); padding: 15px; border-radius: 12px; margin-bottom: 15px; border: 1px solid var(--border);">
                                 <!-- Reusing origImgSrc logic but specifically we want to reuse the QRIS base64 if possible, or just copy it. Actually, we can grab the QRIS img src directly from the DOM to avoid huge string here -->
-                                <img src="\${document.querySelector('.bank-info img[alt=\'QRIS Payment\']').src}" alt="QRIS Payment"
+                                <img src="${document.querySelector('.bank-info img') ? document.querySelector('.bank-info img').src : ''}" alt="QRIS Payment"
                                     style="max-width: 200px; height: auto; border-radius: 8px; margin: 0 auto 10px; display: block;">
                                 <strong style="font-size: 1.05rem; color: var(--dark);">QRIS (Pro Access ID)</strong>
                             </div>
